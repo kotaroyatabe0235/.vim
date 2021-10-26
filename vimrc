@@ -28,33 +28,8 @@ set shellslash
 " NERDTree
 autocmd VimEnter * NERDTree
 
-" java-lsp
-if executable('java')
-	au User lsp_setup call lsp#register_server({
-	\ 'name': 'eclipse.jdt.ls',
-    \ 'cmd': {server_info->[
-    \   'java',
-    \   '-Declipse.application=org.eclipse.jdt.ls.core.id1',
-    \   '-Dosgi.bundles.defaultStartLevel=4',
-    \   '-Declipse.product=org.eclipse.jdt.ls.core.product',
-    \   '-Dlog.level=ALL',
-    \   '-noverify',
-    \   '-Dfile.encording=UTF-8',
-    \   '-Xmx512MB',
-    \   '-jar',
-    \   expand('~/eclipse_jdt/1.4.0/plugins/org.eclipse.equinox.launcher_1.6.300.v20210813-1054.jar'),
-    \   '-configuration',
-    \   expand('~/eclipse_jdt/1.4.0/config_linux'),
-    \   '-data',
-    \   getcwd()
-    \ ]},
-    \ 'whitelist':['java'],
-    \ })
-endif
-
-" vim-plugs setup
+" Plug
 call plug#begin()
-
 " Plugins
 Plug 'preservim/nerdtree'
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -66,6 +41,8 @@ let g:asyncomplete_remove_duplicates = 1
 let g:asyncomplete_smart_completion = 1
 let g:asyncomplete_auto_popup = 1
 Plug 'w0rp/ale'
+
+Plug 'mattn/vim-lsp-settings'
 
 call plug#end()
 
