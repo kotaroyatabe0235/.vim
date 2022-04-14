@@ -35,13 +35,6 @@ Plug 'preservim/nerdtree'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-
-let g:asyncomplete_remove_duplicates = 1
-let g:asyncomplete_smart_completion = 1
-let g:asyncomplete_auto_popup = 1
-Plug 'w0rp/ale'
-
 Plug 'mattn/vim-lsp-settings'
 
 call plug#end()
