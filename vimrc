@@ -32,8 +32,6 @@ autocmd VimEnter * NERDTree
 call plug#begin()
 " Plugins
 Plug 'preservim/nerdtree'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 
